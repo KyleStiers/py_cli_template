@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "py-cli"
+version = "0.1.0"
+description = ""
+authors = ["Kyle Stiers (GNOCB) <kyle.stiers@bayer.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+rich-click = "^1.8.3"
+pyserde = "^0.19.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
