@@ -2,7 +2,7 @@
 name = "py-cli"
 version = "0.1.0"
 description = ""
-authors = ["Kyle Stiers (GNOCB) <kyle.stiers@bayer.com>"]
+authors = [""]
 readme = "README.md"
 
 [tool.poetry.dependencies]
