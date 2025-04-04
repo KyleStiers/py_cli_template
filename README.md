@@ -26,3 +26,7 @@ These are a good starting point for all python projects in my opinion. To add ne
 An empty `.envrc` is kept to remind myself of integrations possible with [direnv](https://direnv.net/).
 
 Pytest and pre-commit hooks are set up as optional dependencies and can be included with `uv sync --extra test`. To initialize pre-commit hooks, check the `.pre-commit-hooks.yaml` file, and then do `pre-commit install` to have each commit checked.
+
+## Extra Indexes
+
+If you need to pull things from private registries such as Artifactory check out the [uv indexes](https://docs.astral.sh/uv/configuration/indexes/) docs. You can either set up a `uv.toml` file, define them explicitly in your `pyproject.toml`, or use the many [UV environment variables](https://docs.astral.sh/uv/configuration/environment/), or pass them at installation time via `--extra-index-url`. There are probably other options as well!
