@@ -1,28 +1,28 @@
 # Python Click App Template
 
-This repo is boilerplate for quickly creating Python click applications. It assumes the use of [poetry](https://python-poetry.org/). Start a new repo from this template and `poetry init` and you should be good to go for starting dev on your CLI application.
+This repo is boilerplate for quickly creating Python click applications. It assumes the use of [uv](https://docs.astral.sh/uv/). Click "Use this template" to create a new repo using this framework.
 
-It also serves as a way for me to keep an active version of my preferred tooling when starting out.
+With your new repo pulled and ready to go:
 
-An empty `.envrc` is kept to remind myself of integrations possible with [direnv](https://direnv.net/).
+1. Rename the `pycli` directory to whatever you want your package to be called
+2. Edit the `[project]` metadata in the [pyproject.toml](pyproject.toml) file
+3. Edit the `[project.scripts]` section to fit your needs. Remember the `pycli` is the core command of your CLI and the `"pycli.cli:cli"` portion is the entrypoint.
 
-Very basic pre-commit hooks are set up.
-
-## Things to edit on new repo creation
-
-To make this your own named CLI you will need to change
-
-1. The source directory name (currently `pycli`), remember to conform to python package naming conventions.
-2. `name` in `pyproject.toml`.
-3. Entry point under `[tool.poetry.scripts]` in `pyproject.toml` in the form `name.entry_script:function_name`.
+From there you're ready to `uv sync` and you should be good to go for starting dev on your CLI application!
 
 ## Packages included `pyproject.toml`
 
-- python ^3.10
+- python ^3.12
 - click
 - rich-click
 - pyserde
 - pydantic
-- pre-commit
-- pytest
 - ruff
+
+These are a good starting point for all python projects in my opinion. To add new dependencies use `uv add <package>` and to remove `uv remove <package>`.
+
+## Optionals
+
+An empty `.envrc` is kept to remind myself of integrations possible with [direnv](https://direnv.net/).
+
+Pytest and pre-commit hooks are set up as optional dependencies and can be included with `uv sync --extra test`. To initialize pre-commit hooks, check the `.pre-commit-hooks.yaml` file, and then do `pre-commit install` to have each commit checked.
