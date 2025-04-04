@@ -1,26 +1,26 @@
-[tool.poetry]
+[project]
 name = "pycli"
 version = "0.1.0"
-description = ""
-authors = ["Kyle Stiers <fakeemail@gmail.com>"]
+description = "Add your description here"
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.8",
+    "rich-click>=1.8.8",
+    "pydantic>=2.11.2",
+    "pyserde>=0.23.0",
+    "ruff>=0.11.4",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-click = "^8.1.7"
-rich-click = "^1.8.3"
-pyserde = "^0.19.2"
-pydantic = "^2.7.4"
-pre-commit = "^3.7.1"
-pytest = "^8.2.2"
-ruff = "^0.5.0"
-
-[tool.poetry.scripts]
+[project.scripts]
 pycli = "pycli.cli:cli"
 
+[project.optional-dependencies]
+test = ['pytest','pre-commit']
+
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
 [tool.ruff.lint]
 # 1. Enable flake8-bugbear (`B`) rules, in addition to the defaults.
