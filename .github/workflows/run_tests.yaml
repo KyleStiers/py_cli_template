@@ -1,5 +1,6 @@
 name: Run Tests
 on:
+  # probably want to alter this, consider 'push'
   workflow_dispatch:
 
 jobs:
